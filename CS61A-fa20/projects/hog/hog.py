@@ -105,6 +105,20 @@ def swine_align(player_score, opponent_score):
     if result >= 10:
         return True
     return False
+
+    # if opponent_score < 10:
+    #     return False
+    # def computeGCD(x, y):
+    #     if y:
+    #         return computeGCD(y, x % y)
+    #     else:
+    #         return x
+    # # gcd = lambda x, y: x if not y else gcd(y, x%y)
+    # gcd = computeGCD(player_score, opponent_score)
+    # # if gcd(player_score, opponent_score) >= 10:
+    # if gcd >= 10:
+    #     return True
+    # return False
     # END PROBLEM 4a
 
 
@@ -181,7 +195,7 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
         elif who == 1 and extra_turn(score1, score0):
             who = 1
         else:
-            who = abs(1-who)
+            who = other(1-who)
         say = say(score0, score1)
     # END PROBLEM 5
     # (note that the indentation for the problem 6 prompt (***YOUR CODE HERE***) might be misleading)
